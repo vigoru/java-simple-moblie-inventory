@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="436.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.131" xmlns:fx="http://javafx.com/fxml/1" fx:controller="invencol.ui.home.FXMLHomeController">
+   <children>
+      <Button layoutX="652.0" layoutY="71.0" mnemonicParsing="false" onAction="#handleButtonNovoColetor" prefHeight="75.0" prefWidth="105.0" text="Adicionar Novo Coletor" textAlignment="CENTER" wrapText="true" />
+      <Button layoutX="652.0" layoutY="225.0" mnemonicParsing="false" onAction="#handleButtonEditarColetor" prefHeight="75.0" prefWidth="105.0" text="Editar Coletor Selecionado" textAlignment="CENTER" wrapText="true" />
+      <Button layoutX="326.0" layoutY="383.0" mnemonicParsing="false" onAction="#handleButtonBuscar" text="Buscar" />
+      <TextField fx:id="tfSearch" layoutX="32.0" layoutY="383.0" />
+      <Label layoutX="32.0" layoutY="359.0" prefHeight="16.0" prefWidth="105.0" text="Buscar Coletor" />
+      <ComboBox fx:id="cbFields" layoutX="203.0" layoutY="383.0" prefHeight="26.0" prefWidth="123.0" promptText="-------" />
+      <TableView fx:id="tvColetores" layoutX="32.0" layoutY="31.0" prefHeight="308.0" prefWidth="595.0">
+        <columns>
+          <TableColumn fx:id="colCgLoja" editable="false" prefWidth="102.0" text="Código Loja" />
+          <TableColumn fx:id="colPatrimonio" editable="false" prefWidth="150.0" text="Nº Inventário" />
+            <TableColumn fx:id="colSerialNumber" editable="false" minWidth="9.0" prefWidth="154.0" text="Nº Serial" />
+            <TableColumn fx:id="colApp" editable="false" prefWidth="172.0" text="Aplicativo" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
